@@ -13,7 +13,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- This is the container for the card with covid info for a state, IDs included for things to be changed -->
+      <div class="uk-container uk-container-sm">
+        <div class="uk-child-width-1-2@s" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-large uk-card-body">
+                    <h1 id="coronaState">CoronaVirus in state</h1>
+                    <h4>Deaths:</h4>
+                        <p id="coronaDeaths">number of deaths</p>
+                    <h4>Positive Cases:</h4>
+                        <p id="coronaPos">number of positive cases</p>
+                    <h4>Hospitilizations:</h4>
+                        <p id="coronaHosp">number of hospitilizations</p>
+                    <h4>Recovered: </h4>
+                        <p id="CoronaRecov">number of people recovered</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the divider to seperate the covid cases from park info -->
+    <hr class="uk-divider-icon">
 
 
     <!-- CDN for UIKit -->
