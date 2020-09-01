@@ -4,21 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
     <!-- reset.css -->
     <link rel="stylesheet" href="assets/reset.css">
 
     <!-- CDN for UIKit -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"/>
 
+    <!-- style.css-->
+    <link rel="stylesheet" href="./assets/style.css">
+
     <title>Document</title>
 </head>
 <body>
     <!-- This is the container for the card with covid info for a state, IDs included for things to be changed -->
-      <div class="uk-container uk-container-sm">
-        <div class="uk-child-width-1-2@s" uk-grid>
+
+    <!--Navbar-->
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li id="nav-name" class="uk-active"><a href="index.html">COVID National Park Info</a></li>
+                <li class="uk-parent"><a href="info.html">About</a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="uk-container uk-container-expand"></div>
+    
+      <div class="uk-container uk-container-expand">
+        <div class="uk-child-width-1-1@e" uk-grid>
             <div>
-                <div class="uk-card uk-card-default uk-card-large uk-card-body">
-                    <h1 id="coronaState">CoronaVirus in state</h1>
+                <div class="uk-card uk-card-default uk-card-large uk-card-body uk-position-center">
+                    <h1 id="coronaState">Corona Virus in state</h1>
                     <h4>Deaths:</h4>
                         <p id="coronaDeaths">number of deaths</p>
                     <h4>Positive Cases:</h4>
@@ -33,6 +51,10 @@
     </div>
     <!-- This is the divider to seperate the covid cases from park info -->
     <hr class="uk-divider-icon">
+
+    <div  class="uk-container uk-container-expand">
+        <div id="parksAppearHere" class="uk-child-width-1-3@m uk-grid-medium uk-grid-match" uk-grid></div>
+    </div>
 
 
     <!-- CDN for UIKit -->
