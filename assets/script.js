@@ -2,6 +2,13 @@ console.log(window);
 var state = "ut";
 callStateParks();
 
+$("#searchButton").on("click", function(event){
+    event.preventDefault();
+    state = $("#dropdownList").val();
+    callStateParks();
+    callStateParks();
+})
+
 function callStateCases (){
 
 // AJAX REQUEST for state cases
@@ -11,10 +18,10 @@ $.ajax({
 }).then(function(response){
     console.log(response)
     console.log(response.positive);
+    // Needs to fill out information in state covid cases card
 })
-}
 
-// callStateCases();
+}
 
 function callStateParks(){
 
