@@ -1,0 +1,22 @@
+#about-us-head {
+    font-size: 40px;
+}
+
+#about-us-body {
+    font-size: 22px;
+}
+
+.center{
+    text-align: center;
+}
+
+.dropdownListClass {
+    float: left;
+}
+
+.formClass {
+    display: block;
+    width: 310px;
+    margin: 10px auto
+}
+
