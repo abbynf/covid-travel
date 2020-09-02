@@ -5,6 +5,7 @@ callStateParks();
 $("#searchButton").on("click", function(event){
     event.preventDefault();
     state = $("#dropdownList").val();
+    $('#parksAppearHere').empty();
     callStateParks();
     callStateParks();
 })
