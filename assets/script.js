@@ -2,6 +2,11 @@ console.log(window);
 var state = "ut";
 
 
+$("#searchButton").on("click", function(event){
+    event.preventDefault();
+    console.log("hello")
+})
+
 function callStateCases (){
 
 // AJAX REQUEST for state cases
