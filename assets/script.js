@@ -1,6 +1,6 @@
 console.log(window);
 var state = "ut";
-
+callStateParks();
 
 function callStateCases (){
 
