@@ -1,16 +1,80 @@
+var stateFullName = {
+    "AL": "Alabama",
+    "AK": "Alaska",
+    "AS": "American Samoa",
+    "AZ": "Arizona",
+    "AR": "Arkansas",
+    "CA": "California",
+    "CO": "Colorado",
+    "CT": "Connecticut",
+    "DE": "Delaware",
+    "DC": "District Of Columbia",
+    "FM": "Federated States Of Micronesia",
+    "FL": "Florida",
+    "GA": "Georgia",
+    "GU": "Guam",
+    "HI": "Hawaii",
+    "ID": "Idaho",
+    "IL": "Illinois",
+    "IN": "Indiana",
+    "IA": "Iowa",
+    "KS": "Kansas",
+    "KY": "Kentucky",
+    "LA": "Louisiana",
+    "ME": "Maine",
+    "MH": "Marshall Islands",
+    "MD": "Maryland",
+    "MA": "Massachusetts",
+    "MI": "Michigan",
+    "MN": "Minnesota",
+    "MS": "Mississippi",
+    "MO": "Missouri",
+    "MT": "Montana",
+    "NE": "Nebraska",
+    "NV": "Nevada",
+    "NH": "New Hampshire",
+    "NJ": "New Jersey",
+    "NM": "New Mexico",
+    "NY": "New York",
+    "NC": "North Carolina",
+    "ND": "North Dakota",
+    "MP": "Northern Mariana Islands",
+    "OH": "Ohio",
+    "OK": "Oklahoma",
+    "OR": "Oregon",
+    "PW": "Palau",
+    "PA": "Pennsylvania",
+    "PR": "Puerto Rico",
+    "RI": "Rhode Island",
+    "SC": "South Carolina",
+    "SD": "South Dakota",
+    "TN": "Tennessee",
+    "TX": "Texas",
+    "UT": "Utah",
+    "VT": "Vermont",
+    "VI": "Virgin Islands",
+    "VA": "Virginia",
+    "WA": "Washington",
+    "WV": "West Virginia",
+    "WI": "Wisconsin",
+    "WY": "Wyoming"
+}
 console.log(window);
-var state = "ut";
-callStateParks();
+var dropDown = $("#dropdownList")
 
 $("#searchButton").on("click", function(event){
     event.preventDefault();
-    state = $("#dropdownList").val();
+    var state = dropDown.val();
+    var stateName = stateFullName[state]; 
     $('#parksAppearHere').empty();
-    callStateParks();
-    callStateParks();
+    callStateParks(state);
+    callStateCases(state,stateName);
+
 })
 
-function callStateCases (){
+
+
+function callStateCases (state,stateName){
 
 // AJAX REQUEST for state cases
 $.ajax({
@@ -20,11 +84,32 @@ $.ajax({
     console.log(response)
     console.log(response.positive);
     // Needs to fill out information in state covid cases card
+
+    $('#coronaState').text(stateName + '?');
+    $('#coronaDeaths').text(response.death);
+    $('#coronaPos').text(response.positive);
+    $('#coronaHosp').text(response.hospitalizedCurrently);
+
+    //variable for if statement
+    var recovered = response.recovered
+    $('#recoveredHeader').css("display","block")
+    $('#coronaRecov').css("display","block")
+    
+    //if value is null hide info
+    if (recovered){
+        $('#coronaRecov').text(response.recovered); 
+    }else{
+        $('#recoveredHeader').css("display","none")
+        $('#coronaRecov').css("display","none")
+    }
+    
+
+
 })
 
 }
 
-function callStateParks(){
+function callStateParks(state){
 
 // AJAX REQUEST for parks in state
 $.ajax({
