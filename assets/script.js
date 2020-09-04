@@ -122,6 +122,7 @@ $.ajax({
         // these are the variables for the logic
         var image = response.data[i].images[0]
         var fees = response.data[i].entranceFees[0]
+        console.log(image)
         
         //This is the creation of the card bodys and info on them
         var parkCard = $('<div></div>');
@@ -131,11 +132,19 @@ $.ajax({
         var aboutPark = $('<p>' + response.data[i].description + '</p>');
         var parkURLHeader = $('<h2></h2>')
         var parkURL = $('<a class="uk-link-heading" href="' + response.data[i].url + '">Visit Park!</a>')
-
+        parkCard.append(parkCardBody);
+        parkCardBody.append(parkHeader);
         // This is the logic, in case there aren't any images or fees
         if(image){
             var parkImage = $('<img data-src="' + response.data[i].images[0].url + '" width="1800" height="1200" alt="" uk-img>');
-        }
+            parkCardBody.append(parkImage);
+        };
+        if(!image){
+            var parkImagePlaceholder =  $('<img data-src="assets/parkplaceholder.jpg" width="1800" height="1200" alt="" uk-img>');
+            var imageMessage = $('<p>Placeholder image, since no image for park found.</p>');
+            parkCardBody.append(parkImagePlaceholder);
+            parkCardBody.append(imageMessage);
+        };
         if(fees){
             var weirdFees = response.data[i].entranceFees[0].cost
             // trim the string so that it is in a readable form.
@@ -143,15 +152,11 @@ $.ajax({
             if(normalFees === '0.000'){
                 normalFees = '0.00'
             }
-            console.log(normalFees)
             var entryCost = $('<h4>Entry Cost: ' + '$'+ normalFees + '</h4>');
             var entryCostDescription = $('<p>' + response.data[i].entranceFees[0].description + '</p>');
-        }
+        };
 
         //All appends to the doc
-        parkCard.append(parkCardBody);
-        parkCardBody.append(parkHeader);
-        parkCardBody.append(parkImage);
         parkCardBody.append(aboutParkHeader);
         parkCardBody.append(aboutPark);
         parkCardBody.append(entryCost);
