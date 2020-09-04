@@ -137,7 +137,14 @@ $.ajax({
             var parkImage = $('<img data-src="' + response.data[i].images[0].url + '" width="1800" height="1200" alt="" uk-img>');
         }
         if(fees){
-            var entryCost = $('<h4>Entry Cost: ' + '$'+ response.data[i].entranceFees[0].cost + '</h4>');
+            var weirdFees = response.data[i].entranceFees[0].cost
+            // trim the string so that it is in a readable form.
+            var normalFees = weirdFees.slice(0,5)
+            if(normalFees === '0.000'){
+                normalFees = '0.00'
+            }
+            console.log(normalFees)
+            var entryCost = $('<h4>Entry Cost: ' + '$'+ normalFees + '</h4>');
             var entryCostDescription = $('<p>' + response.data[i].entranceFees[0].description + '</p>');
         }
 
