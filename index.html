@@ -11,20 +11,24 @@
     <!-- CDN for UIKit -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.7/dist/css/uikit.min.css"/>
 
+    <!-- link to the font for the page -->
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap" rel="stylesheet">
+
     <!-- style.css-->
     <link rel="stylesheet" href="./assets/style.css">
 
-    <title>Document</title>
+
+    <title>Covid National Park Info</title>
 </head>
-<body>
+<body class="green">
     <!-- This is the container for the card with covid info for a state, IDs included for things to be changed -->
 
     <!--Navbar-->
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav id="navbar" class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-center">
-            <ul class="uk-navbar-nav">
-                <li id="nav-name" class="uk-active"><a href="index.html">COVID National Park Info</a></li>
-                <li class="uk-parent"><a href="info.html">About</a></li>
+            <ul class="uk-navbar-nav blueText changeFont">
+                <li id="nav-name" class="uk-active blueText changeFont"><a href="index.html">COVID National Park Info</a></li>
+                <li class="uk-parent blueText"><a href="info.html">About</a></li>
                 <li><a href=""></a></li>
             </ul>
         </div>
@@ -34,7 +38,7 @@
         <div class="uk-container uk-container-expand formClass">
 
             <form>
-                <h2 id="explanation" class="center">Choose a state to see the Corona information and parks you can visit!</h2>
+                <h2 id="explanation" class="center blueText changeFont">Choose a state to see the Corona information and parks you can visit!</h2>
                 <div class="uk-margin">
                     <div class="dropdownListClass" uk-form-custom="target: > * > span:first-child">
                         <select id="dropdownList">
@@ -103,16 +107,16 @@
             
         </div>
     
-        <div class="uk-card uk-card-default uk-card-large uk-card-body startHidden">
-            <h1 class="center">How's the Corona in...</h1>
-            <h2 id="coronaState" class="center">State</h2>
-            <h4 class="center">Deaths:</h4>
+        <div class="uk-card uk-card-default uk-card-large uk-card-body startHidden darkGreen">
+            <h1 class="center blueText changeFont">How's the Corona in...</h1>
+            <h2 id="coronaState" class="center blueText changeFont">State</h2>
+            <h4 class="center blueText changeFont">Deaths:</h4>
                 <p id="coronaDeaths" class="center">number of deaths</p>
-            <h4 class="center">Positive Cases:</h4>
+            <h4 class="center blueText changeFont">Positive Cases:</h4>
                 <p id="coronaPos" class="center">number of positive cases</p>
-            <h4 class="center">Current Hospitilizations:</h4>
+            <h4 class="center blueText changeFont">Current Hospitilizations:</h4>
                 <p id="coronaHosp" class="center">number of hospitilizations</p>
-            <h4 id="recoveredHeader" class="center">Recovered: </h4>
+            <h4 id="recoveredHeader" class="center blueText changeFont">Recovered: </h4>
                 <p id="coronaRecov" class="center">number of people recovered</p>
 
     

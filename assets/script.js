@@ -127,11 +127,11 @@ $.ajax({
         
         //This is the creation of the card bodys and info on them
         var parkCard = $('<div></div>');
-        var parkCardBody = $('<div class="uk-card uk-card-primary uk-card-body"></div>');
-        var parkHeader = $('<h2 class="uk-card-title center">' + response.data[i].fullName + '</h2>');
-        var aboutParkHeader = $('<h4>About:</h4>');
+        var parkCardBody = $('<div class="uk-card uk-card-primary uk-card-body blue borderRadius"></div>');
+        var parkHeader = $('<h1 class="uk-card-title center changeFont">' + response.data[i].fullName + '</h1>');
+        var aboutParkHeader = $('<h4 class="changeFont">About:</h4>');
         var aboutPark = $('<p>' + response.data[i].description + '</p>');
-        var parkURLHeader = $('<h2></h2>')
+        var parkURLHeader = $('<h2 class="changeFont"></h2>')
         var parkURL = $('<a class="uk-link-heading" href="' + response.data[i].url + '">Visit Park!</a>')
         parkCard.append(parkCardBody);
         parkCardBody.append(parkHeader);
