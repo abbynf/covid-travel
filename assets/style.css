@@ -1,3 +1,26 @@
+body,html{
+    color: #edf5e1;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: #5cdb95;
+}
+#navbar{
+    background-color: #8ee4af;
+}
+.changeFont{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.darkGreen{
+    background-color: #8ee4af;
+}
+.green{
+    background-color: #5cdb95;
+}
+.blue{
+    background-color: #05386b;
+}
+.blueText{
+    color: #05386b;
+}
 #about-us-head {
     font-size: 40px;
 }
@@ -18,5 +41,8 @@
     display: block;
     width: 310px;
     margin: 10px auto
+}
+.borderRadius{
+    border-radius: 1rem;
 }
 
