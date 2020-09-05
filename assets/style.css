@@ -19,4 +19,7 @@
     width: 310px;
     margin: 10px auto
 }
+.startHidden{
+    visibility: hidden;
+}
 

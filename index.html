@@ -34,6 +34,7 @@
         <div class="uk-container uk-container-expand formClass">
 
             <form>
+                <h2 id="explanation" class="center">Choose a state to see the Corona information and parks you can visit!</h2>
                 <div class="uk-margin">
                     <div class="dropdownListClass" uk-form-custom="target: > * > span:first-child">
                         <select id="dropdownList">
@@ -102,7 +103,7 @@
             
         </div>
     
-        <div class="uk-card uk-card-default uk-card-large uk-card-body ">
+        <div class="uk-card uk-card-default uk-card-large uk-card-body startHidden">
             <h1 class="center">How's the Corona in...</h1>
             <h2 id="coronaState" class="center">State</h2>
             <h4 class="center">Deaths:</h4>
@@ -124,7 +125,7 @@
         </div>
     </div>
     <!-- This is the divider to seperate the covid cases from park info -->
-    <hr class="uk-divider-icon">
+    <hr class="uk-divider-icon startHidden">
 
     <div  class="uk-container uk-container-expand">
         <div id="parksAppearHere" class="uk-child-width-1-3@m uk-grid-medium uk-grid-match" uk-grid></div>
