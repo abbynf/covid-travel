@@ -45,4 +45,7 @@ body,html{
 .borderRadius{
     border-radius: 1rem;
 }
+.startHidden{
+    visibility: hidden;
+}
 

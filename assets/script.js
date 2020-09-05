@@ -69,7 +69,8 @@ $("#searchButton").on("click", function(event){
     $('#parksAppearHere').empty();
     callStateParks(state);
     callStateCases(state,stateName);
-
+    $('*').removeClass('startHidden');
+    $('#explanation').remove();
 })
 
 
