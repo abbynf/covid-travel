@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
     <!-- reset.css -->
     <link rel="stylesheet" href="assets/reset.css">
 
@@ -119,17 +118,14 @@
             <h4 id="recoveredHeader" class="center blueText changeFont">Recovered: </h4>
                 <p id="coronaRecov" class="center">number of people recovered</p>
 
-    
-      <div class="uk-container uk-container-expand">
-        <div class="uk-child-width-1-1@e" uk-grid>
-            <div>
-
-                </div>
-            </div>
-        </div>
     </div>
+
+    <div id="loaderDiv" class="centerLoader">
+        <button id="loader"></button>
+    </div>
+
     <!-- This is the divider to seperate the covid cases from park info -->
-    <hr class="uk-divider-icon startHidden">
+    <hr id="divider" class="uk-divider-icon">
 
     <div  class="uk-container uk-container-expand">
         <div id="parksAppearHere" class="uk-child-width-1-3@m uk-grid-medium uk-grid-match" uk-grid></div>

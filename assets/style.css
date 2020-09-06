@@ -3,24 +3,30 @@ body,html{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     background-color: #5cdb95;
 }
+
 #navbar{
     background-color: #8ee4af;
 }
+
 .changeFont{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .darkGreen{
     background-color: #8ee4af;
 }
+
 .green{
     background-color: #5cdb95;
 }
+
 .blue{
     background-color: #05386b;
 }
+
 .blueText{
     color: #05386b;
 }
+
 #about-us-head {
     font-size: 40px;
 }
@@ -45,7 +51,38 @@ body,html{
 .borderRadius{
     border-radius: 1rem;
 }
+
 .startHidden{
     visibility: hidden;
 }
+
+.hide{
+    display: none;
+}
+
+.centerLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: #08d635;
+    border-radius: 50%;
+    border: 1px solid #1D9AF2;
+    border-top: 2px solid rgb(0, 255, 242);
+    animation: spinner1 600ms linear infinite;
+    }
+    @keyframes spinner1 {
+    to {
+    transform: rotate(360deg);
+    }
+    }
+
 
