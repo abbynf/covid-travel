@@ -61,6 +61,8 @@ var stateFullName = {
 }
 console.log(window);
 var dropDown = $("#dropdownList")
+$("#loaderDiv").hide();
+$("#divider").hide();
 
 $("#searchButton").on("click", function(event){
     event.preventDefault();
@@ -84,8 +86,8 @@ $.ajax({
 }).then(function(response){
     console.log(response)
     console.log(response.positive);
+    
     // Needs to fill out information in state covid cases card
-
     $('#coronaState').text(stateName + '?');
     $('#coronaDeaths').text(response.death);
     $('#coronaPos').text(response.positive);
@@ -103,11 +105,7 @@ $.ajax({
         $('#recoveredHeader').css("display","none")
         $('#coronaRecov').css("display","none")
     }
-    
-
-
 })
-
 }
 
 function callStateParks(state){
@@ -115,8 +113,13 @@ function callStateParks(state){
 // AJAX REQUEST for parks in state
 $.ajax({
     url: "https://developer.nps.gov/api/v1/parks?stateCode=" + state + "&api_key=CNEwj4WXnx6aTMxwtuZLAJ2QUVMvvoeX3JMb1euj",
-    method: 'GET'
+    method: 'GET',
+    beforeSend: function(){
+        $("#loaderDiv").show();
+     },
 }).then(function(response){
+    $("#loaderDiv").hide();
+    $("#divider").show();
     console.log(response)
    //Create a card for every park and include all their info
    for (i=0; i<response.data.length; i++){
