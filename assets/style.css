@@ -55,6 +55,9 @@ body,html{
 .startHidden{
     visibility: hidden;
 }
+#coronaCard{
+    display: none;
+}
 
 .hide{
     display: none;
