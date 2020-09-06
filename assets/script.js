@@ -71,6 +71,7 @@ $("#searchButton").on("click", function(event){
     callStateCases(state,stateName);
     $('*').removeClass('startHidden');
     $('#explanation').remove();
+    $( "#coronaCard" ).first().fadeIn( "slow" );
 })
 
 
