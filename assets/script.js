@@ -127,7 +127,6 @@ $.ajax({
         // these are the variables for the logic
         var image = response.data[i].images[0]
         var fees = response.data[i].entranceFees[0]
-        console.log(image)
         
         //This is the creation of the card bodys and info on them
         var parkCard = $('<div></div>');
