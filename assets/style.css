@@ -87,19 +87,3 @@ body,html{
     transform: rotate(360deg);
     }
     }
-
-.footer{
-    position: fixed;
-    height: 50px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #8ee4af;
-    text-align: center;
-}
-#footerText{
-    font-family: sans-serif;
-    color: #05386b;
-}
-
-

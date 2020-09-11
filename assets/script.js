@@ -1,3 +1,4 @@
+// Variable to get state abbreviation and full state name
 var stateFullName = {
     "AL": "Alabama",
     "AK": "Alaska",
@@ -59,11 +60,11 @@ var stateFullName = {
     "WI": "Wisconsin",
     "WY": "Wyoming"
 }
-console.log(window);
 var dropDown = $("#dropdownList")
 $("#loaderDiv").hide();
 $("#divider").hide();
 
+//When button is  clicked search APIs from user choice
 $("#searchButton").on("click", function(event){
     event.preventDefault();
     var state = dropDown.val();
@@ -85,8 +86,6 @@ $.ajax({
     url: "https://api.covidtracking.com/v1/states/" + state + "/current.json",
     method: 'GET'
 }).then(function(response){
-    console.log(response)
-    console.log(response.positive);
     
     // Needs to fill out information in state covid cases card
     $('#coronaState').text(stateName + '?');
@@ -106,12 +105,12 @@ $.ajax({
         $('#recoveredHeader').css("display","none")
         $('#coronaRecov').css("display","none")
     }
-})
+ })
 }
 
 function callStateParks(state){
 
-// AJAX REQUEST for parks in state
+// AJAX REQUEST for parks in state with a loader while it fetches information
 $.ajax({
     url: "https://developer.nps.gov/api/v1/parks?stateCode=" + state + "&api_key=CNEwj4WXnx6aTMxwtuZLAJ2QUVMvvoeX3JMb1euj",
     method: 'GET',
@@ -121,9 +120,10 @@ $.ajax({
 }).then(function(response){
     $("#loaderDiv").hide();
     $("#divider").show();
-    console.log(response)
-   //Create a card for every park and include all their info
+
+   //Loop throughand create a card for every park and include all their info
    for (i=0; i<response.data.length; i++){
+
         // these are the variables for the logic
         var image = response.data[i].images[0]
         var fees = response.data[i].entranceFees[0]
@@ -139,6 +139,7 @@ $.ajax({
         var parkURL = $('<a class="uk-link-heading" href="' + response.data[i].url + '">Visit Park!</a>')
         parkCard.append(parkCardBody);
         parkCardBody.append(parkHeader);
+
         // This is the logic, in case there aren't any images or fees
         if(image){
             var parkImage = $('<img data-src="' + response.data[i].images[0].url + '" width="1800" height="1200" alt="" uk-img>');
@@ -161,7 +162,7 @@ $.ajax({
             var entryCostDescription = $('<p>' + response.data[i].entranceFees[0].description + '</p>');
         };
 
-        //All appends to the doc
+        //Append the rest of the items and the card itself.
         parkCardBody.append(aboutParkHeader);
         parkCardBody.append(aboutPark);
         parkCardBody.append(entryCost);
@@ -169,17 +170,6 @@ $.ajax({
         parkCardBody.append(parkURLHeader);
         parkURLHeader.append(parkURL);
         $('#parksAppearHere').prepend(parkCard)
-
-        //* console logs for all the info used
-        // console.log(response.data[i]);
-        // console.log(response.data[i].fullName);
-        // console.log(response.data[i].description);
-        // console.log(response.data[i].images[0].url);
-        // console.log(response.data[i].entranceFees[0].cost)
-        // console.log(response.data[i].entranceFees[0].description)
-        // console.log(response.data[i].url)
-    }
-})
+   }
+ })
 }
-
-// callStateParks();
