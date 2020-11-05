@@ -23,7 +23,7 @@
     <!-- This is the container for the card with covid info for a state, IDs included for things to be changed -->
 
     <!--Navbar-->
-    <nav id="navbar" class="uk-navbar-container" uk-navbar>
+    <nav id="navbar" class="uk-navbar-container uk-grid" uk-navbar>
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav blueText changeFont">
                 <li id="nav-name" class="uk-active blueText changeFont"><a href="index.html">COVID National Park Info</a></li>
@@ -33,20 +33,27 @@
         </div>
     </nav>
 
-    <header>
-        <h1>Camping in the Coronavirus Era</h1>
-    </header>
-    
-    <aside>
-        <p>Pick your perfect socially distanced getaway in a national park while monitoring the status of the coronavirus.</p>
-    </aside>
-
-        <!-- This div holds the dropdown list of states -->
-        <div class="uk-container uk-container-expand formClass">
-
-            <form>
-                <h2 id="explanation" class="center blueText changeFont">Choose a state to see the Corona information and parks you can visit!</h2>
-                <div class="uk-margin">
+    <div class="uk-container uk-container-expand formClass">
+        
+        <div>
+            <header>
+                <div>
+                    <h1>Camping in the Coronavirus Era</h1>
+                </div>
+            </header>
+            
+            <aside>
+                <div>
+                    <p>Pick your perfect socially distanced getaway in a national park while monitoring the status of the coronavirus.</p>
+                </div>
+            </aside>
+        </div>
+        
+        
+        <form>
+            <h2 id="explanation" class="center blueText changeFont">Choose a state to see the Corona information and parks you can visit!</h2>
+            <div class="uk-margin">
+                <!-- This div holds the dropdown list of states -->
                     <div class="dropdownListClass" uk-form-custom="target: > * > span:first-child">
                         <select id="dropdownList">
                             <option value="">Please select...</option>
