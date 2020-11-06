@@ -57,7 +57,20 @@ body,html{
 }
 #coronaCard{
     display: none;
+    background-color: darkgray;
+    display: inline-block;
 }
+
+
+.grayback {
+    background-color: darkgray;
+    float: left;
+    padding: 5px;
+    padding-right: 50px;
+    margin: 0px;
+
+}
+
 
 .hide{
     display: none;
