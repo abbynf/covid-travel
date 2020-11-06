@@ -121,19 +121,15 @@
             
         </div>
     
-        <div id="coronaCard" class="uk-card uk-card-default uk-card-large uk-card-body startHidden darkGreen">
-            <h1 class="center blueText changeFont">How's the Corona in...</h1>
+        <div>
             <h2 id="coronaState" class="center blueText changeFont">State</h2>
-            <h4 class="center blueText changeFont">Deaths:</h4>
-                <p id="coronaDeaths" class="center">number of deaths</p>
-            <h4 class="center blueText changeFont">Positive Cases:</h4>
-                <p id="coronaPos" class="center">number of positive cases</p>
-            <h4 class="center blueText changeFont">Current Hospitilizations:</h4>
-                <p id="coronaHosp" class="center">number of hospitilizations</p>
-            <h4 id="recoveredHeader" class="center blueText changeFont">Recovered: </h4>
-                <p id="coronaRecov" class="center">number of people recovered</p>
-
-    </div>
+            <ul id="coronaCard" class="startHidden">
+                <li class="center blueText changeFont grayback" id="coronaDeaths">Deaths:</li>
+                <li class="center blueText changeFont grayback" id="coronaPos">Positive Cases:</li>
+                <li class="center blueText changeFont grayback" id="coronaHosp">Current Hospitilizations:</li>
+                <li class="center blueText changeFont grayback" id="coronaRecov">Recovered: </li>
+            </ul>
+        </div>
 
     <div id="loaderDiv" class="centerLoader">
         <button id="loader"></button>

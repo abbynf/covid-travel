@@ -88,19 +88,18 @@ $.ajax({
 }).then(function(response){
     
     // Needs to fill out information in state covid cases card
-    $('#coronaState').text(stateName + '?');
-    $('#coronaDeaths').text(response.death);
-    $('#coronaPos').text(response.positive);
-    $('#coronaHosp').text(response.hospitalizedCurrently);
+    $('#coronaState').text(stateName);
+    $('#coronaDeaths').text("Deaths: " + response.death);
+    $('#coronaPos').text("Positive Cases: " + response.positive);
+    $('#coronaHosp').text("Hospitalized: " + response.hospitalizedCurrently);
 
     //variable for if statement
     var recovered = response.recovered
-    $('#recoveredHeader').css("display","block")
     $('#coronaRecov').css("display","block")
     
     //if value is null hide info
     if (recovered){
-        $('#coronaRecov').text(response.recovered); 
+        $('#coronaRecov').text("Recovered: " + response.recovered); 
     }else{
         $('#recoveredHeader').css("display","none")
         $('#coronaRecov').css("display","none")
