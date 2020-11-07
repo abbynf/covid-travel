@@ -79,9 +79,13 @@ body,html{
     visibility: hidden;
 }
 #coronaCard{
-    display: none;
+    /* display: none; */
     background-color: darkgray;
     display: inline-block;
+    text-align: center;
+    width: 60%;
+    margin-right: 19%;
+    margin-left: 19%;
 }
 
 .titleFont {
@@ -95,6 +99,14 @@ body,html{
     text-align: center;
 }
 
+#coronaState {
+    margin-top: 40px;
+}
+
+.centerDiv {
+    width: 90%;
+    margin: auto;
+}
 
 .grayback {
     background-color: darkgray;

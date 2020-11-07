@@ -89,6 +89,7 @@ $.ajax({
     
     // Needs to fill out information in state covid cases card
     $('#coronaState').text(stateName);
+    $('#coronaState').css("display", "block")
     $('#coronaDeaths').text("Deaths: " + response.death);
     $('#coronaPos').text("Positive Cases: " + response.positive);
     $('#coronaHosp').text("Hospitalized: " + response.hospitalizedCurrently);
