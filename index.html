@@ -12,18 +12,19 @@
 
     <!-- link to the font for the page -->
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
 
     <!-- style.css-->
     <link rel="stylesheet" href="./assets/style.css">
 
-
     <title>Covid National Park Info</title>
 </head>
-<body class="green">
+
+<body class="green uk-width-1-1">
     <!-- This is the container for the card with covid info for a state, IDs included for things to be changed -->
 
     <!--Navbar-->
-    <nav id="navbar" class="uk-navbar-container uk-grid" uk-navbar>
+    <nav id="navbar" class="uk-navbar-container" uk-navbar>
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav blueText changeFont">
                 <li id="nav-name" class="uk-active blueText changeFont"><a href="index.html">COVID National Park Info</a></li>
@@ -33,21 +34,33 @@
         </div>
     </nav>
 
-    <div class="uk-container uk-container-expand formClass">
-        
-        <div>
-            <header>
-                <div>
-                    <h1>Camping in the Coronavirus Era</h1>
-                </div>
-            </header>
+    <!-- Div holds image, header, aside, and form-->
+    <div>
+
+        <!-- Div holds image, header, aside -->
+        <div class="topHalf" uk-grid>
+
+            <!-- Div for the image -->
+            <div class="uk-width-1-2@s">
+                <img src="./assets/images/camping-tent.png" alt="Campsite" class="campsiteImg">
+            </div>
             
-            <aside>
-                <div>
-                    <p>Pick your perfect socially distanced getaway in a national park while monitoring the status of the coronavirus.</p>
-                </div>
-            </aside>
+            <!-- Div for Header and aside -->
+            <div class="uk-width-1-2@s headerAside">
+                <header>
+                    <div>
+                        <h1 class="center titleFont">NATIONAL PARKS<br><span class="inTitle">in the</span><br>PANDEMIC</h1>
+                    </div>
+                </header>
+                
+                <aside>
+                    <div>
+                        <p class="tagline">Pick your perfect socially distanced getaway in a national park while monitoring the status of the coronavirus.</p>
+                    </div>
+                </aside>
+            </div>
         </div>
+
         
         
         <form>

@@ -8,6 +8,29 @@ body,html{
     background-color: #8ee4af;
 }
 
+
+.campsiteImg {
+    margin: 10%;
+    max-width: 80%;
+    margin-top: 0;
+}
+
+.headerAside {
+    width: 36%;
+    margin: auto;  
+}
+
+.topHalf {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.inTitle {
+    font-size: 3vw;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: normal;
+}
+
 .changeFont{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -61,6 +84,17 @@ body,html{
     display: inline-block;
 }
 
+.titleFont {
+    font-family: 'Neucha', cursive;
+    font-size: 5vw;
+    font-weight: 900;
+}
+
+.tagline {
+    font-size: 2vw;
+    text-align: center;
+}
+
 
 .grayback {
     background-color: darkgray;
@@ -100,3 +134,18 @@ body,html{
     transform: rotate(360deg);
     }
     }
+
+@media only screen and (max-width: 639px) {
+    .titleFont {
+        font-size: 10vw;
+    }
+    .inTitle {
+        font-size: 9vw;
+    }
+    .headerAside {
+        width: 80%;
+    }
+    .tagline {
+        font-size: 6vw;
+    }
+}
