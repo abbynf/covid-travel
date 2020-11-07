@@ -79,7 +79,6 @@ body,html{
     visibility: hidden;
 }
 #coronaCard{
-    /* display: none; */
     background-color: darkgray;
     display: inline-block;
     text-align: center;
