@@ -105,6 +105,10 @@ body,html{
 
 }
 
+#explanation {
+    margin: 58px 0 20px 0;
+}
+
 
 .hide{
     display: none;
