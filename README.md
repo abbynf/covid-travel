@@ -1,6 +1,8 @@
 # covid-travel
 ## Table of Contents
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 - [Contributors](#Contributors)
 - [About the Application](#About)
 - [Preview](#Preview)
