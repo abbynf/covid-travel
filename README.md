@@ -7,6 +7,7 @@
 - [About the Application](#About)
 - [Preview](#Preview)
 - [APIs Used](#APIs-Used)
+- [Future Development](#Future-Development)
 - [FAQ](#FAQ)
 - [Credits and Sources](#Credits-and-Libraries-Used)
 
@@ -34,6 +35,15 @@ https://abbynf.github.io/covid-travel/
 
 ###### Used for information about parks in a state.
  https://www.nps.gov/subjects/developer/api-documentation.htm#/
+
+
+### Future Development
+Our team looks forward to adding additional features to the application. 
+- Add icons to each national park to display ammenities of the park
+- Add ability to refine search results
+- Paginate results
+- Add ability to sort by distance
+- Display information about covid-related travel restrictions of the selected state
 
 ### FAQ
      Why are there repeating images for parks?
