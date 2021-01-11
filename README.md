@@ -21,15 +21,21 @@
 
 ### About
 
-Through the use of APIs, JavaScript, CSS, HTML and various other tools; we have created an application that helps those who wish to go outside and travel in a safe manner. This application allows you to choose a state, and then goes on to display current information about the Coronavirus in that state. Then it displays information of that state's parks. This all comes together to create an easy experience for users to plan educated and safe trips.  
+Through the use of APIs, JavaScript, CSS, HTML and various other tools, we have created an application that helps those who wish to travel in a safely in the pandemic. This application allows you to choose a state, and then goes on to display current information about the coronavirus in that state. Then it displays information of that state's parks. This all comes together to create an easy experience for users to plan educated and safe trips.
+This front-end application is organized by web page (the home page and the about page) and by the assets used to create it (javascript files, stylesheets, and images).
     
 ### Preview
 ![](assets/sample.gif)
 ###### Link to deployed Application
 https://abbynf.github.io/covid-travel/
 
-### APIs Used
+### Instructions
+1. Select your chosen state from the drop-down list. 
+2. Click the 'search' button. 
+3. The results of the search will be displayed below the drop-down menu and search button. 
+4. To visit the park's website, click the "Visit Park!" link below the picture of the park. 
 
+### APIs Used
 ###### Used for information about Coronavirus in a state.
  https://covidtracking.com/data/api
 
